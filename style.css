@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0f0f0f;
+  color: #e0e0e0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 72px 24px 40px;
+}
+
+.hero {
+  padding: 48px 0 56px;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 16px;
+  color: #ffffff;
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.tagline {
+  max-width: 680px;
+  margin-bottom: 32px;
+  color: #b8b8b8;
+  font-size: 20px;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.download-button:hover {
+  background: #1d4ed8;
+}
+
+.features,
+.screenshots {
+  padding: 32px 0;
+  border-top: 1px solid #242424;
+}
+
+.features ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.features li {
+  position: relative;
+  margin-bottom: 14px;
+  padding-left: 30px;
+  color: #d6d6d6;
+}
+
+.features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #6ee7b7;
+  font-weight: 700;
+}
+
+.screenshots {
+  display: grid;
+  gap: 20px;
+}
+
+.screenshots img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  background: #151515;
+}
+
+footer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+  color: #8a8a8a;
+  font-size: 14px;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 40px 18px 28px;
+  }
+
+  .hero {
+    padding: 32px 0 40px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .tagline {
+    font-size: 18px;
+  }
+
+  .download-button {
+    width: 100%;
+    text-align: center;
+  }
+}
