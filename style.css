@@ -11,41 +11,62 @@ body {
 }
 
 .page {
-  max-width: 800px;
+  max-width: 820px;
   margin: 0 auto;
   padding: 72px 24px 40px;
 }
 
+/* ── Hero ─────────────────────────────────────────────── */
+
 .hero {
-  padding: 48px 0 56px;
+  padding: 48px 0 64px;
 }
 
-h1,
-h2,
+.version-badge {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 4px 12px;
+  border: 1px solid #2a2a2a;
+  border-radius: 20px;
+  background: #161616;
+  color: #8a8a8a;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  margin: 0 0 16px;
+  color: #ffffff;
+  font-size: 52px;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+}
+
 p {
   margin-top: 0;
 }
 
-h1 {
-  margin-bottom: 16px;
-  color: #ffffff;
-  font-size: 48px;
-  line-height: 1.1;
-  font-weight: 700;
-}
-
-h2 {
-  margin-bottom: 20px;
-  color: #ffffff;
-  font-size: 24px;
-  line-height: 1.2;
-}
-
 .tagline {
-  max-width: 680px;
-  margin-bottom: 32px;
-  color: #b8b8b8;
+  max-width: 600px;
+  margin-bottom: 36px;
+  color: #a0a0a0;
   font-size: 20px;
+  line-height: 1.5;
+}
+
+.cta-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .download-button {
@@ -54,31 +75,46 @@ h2 {
   border-radius: 8px;
   background: #2563eb;
   color: #ffffff;
+  font-size: 15px;
   font-weight: 700;
   text-decoration: none;
+  transition: background 0.15s;
 }
 
 .download-button:hover {
   background: #1d4ed8;
 }
 
+.cta-note {
+  color: #666;
+  font-size: 14px;
+}
+
+/* ── Sections ─────────────────────────────────────────── */
+
 .features,
 .screenshots {
-  padding: 32px 0;
-  border-top: 1px solid #242424;
+  padding: 40px 0;
+  border-top: 1px solid #1e1e1e;
 }
+
+/* ── Feature list ─────────────────────────────────────── */
 
 .features ul {
   margin: 0;
-  padding-left: 0;
+  padding: 0;
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 32px;
 }
 
 .features li {
   position: relative;
-  margin-bottom: 14px;
-  padding-left: 30px;
-  color: #d6d6d6;
+  padding-left: 26px;
+  color: #c8c8c8;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 .features li::before {
@@ -89,38 +125,62 @@ h2 {
   font-weight: 700;
 }
 
+/* ── Screenshots ──────────────────────────────────────── */
+
 .screenshots {
+  display: block;
+}
+
+.screenshots h2 {
+  margin-bottom: 20px;
+}
+
+.screenshots-grid {
   display: grid;
-  gap: 20px;
+  gap: 16px;
 }
 
 .screenshots img {
   max-width: 100%;
   height: auto;
-  border: 1px solid #2a2a2a;
-  border-radius: 8px;
+  border: 1px solid #242424;
+  border-radius: 10px;
   background: #151515;
 }
 
+/* ── Footer ───────────────────────────────────────────── */
+
 footer {
-  max-width: 800px;
+  max-width: 820px;
   margin: 0 auto;
   padding: 24px;
-  color: #8a8a8a;
-  font-size: 14px;
+  border-top: 1px solid #1e1e1e;
+  color: #555;
+  font-size: 13px;
 }
 
 footer p {
-  margin-bottom: 0;
+  margin: 0;
 }
 
-@media (max-width: 600px) {
+footer a {
+  color: #555;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #999;
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+
+@media (max-width: 640px) {
   .page {
     padding: 40px 18px 28px;
   }
 
   .hero {
-    padding: 32px 0 40px;
+    padding: 32px 0 48px;
   }
 
   h1 {
@@ -128,11 +188,20 @@ footer p {
   }
 
   .tagline {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .download-button {
     width: 100%;
     text-align: center;
+  }
+
+  .cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .features ul {
+    grid-template-columns: 1fr;
   }
 }
